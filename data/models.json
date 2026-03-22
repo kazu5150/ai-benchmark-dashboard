@@ -1,0 +1,217 @@
+{
+  "models": [
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "provider": "OpenAI",
+      "price_per_1m_tokens": { "input": 2.5, "output": 10 },
+      "context_length": 128000,
+      "release_date": "2024-05-13",
+      "benchmarks": {
+        "jglue": { "score": 85.2, "details": { "jsts": 88.1, "jnli": 82.3 } },
+        "rakuda": { "score": 78.5 },
+        "nejumi": { "score": 82.0 },
+        "mt_bench_ja": { "score": 8.3 },
+        "japanese_mmlu": { "score": 79.1 }
+      }
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o mini",
+      "provider": "OpenAI",
+      "price_per_1m_tokens": { "input": 0.15, "output": 0.6 },
+      "context_length": 128000,
+      "release_date": "2024-07-18",
+      "benchmarks": {
+        "jglue": { "score": 72.8 },
+        "rakuda": { "score": 65.2 },
+        "nejumi": { "score": 68.5 },
+        "mt_bench_ja": { "score": 7.1 },
+        "japanese_mmlu": { "score": 64.3 }
+      }
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "provider": "Anthropic",
+      "price_per_1m_tokens": { "input": 3, "output": 15 },
+      "context_length": 200000,
+      "release_date": "2024-06-20",
+      "benchmarks": {
+        "jglue": { "score": 87.1 },
+        "rakuda": { "score": 82.3 },
+        "nejumi": { "score": 85.7 },
+        "mt_bench_ja": { "score": 8.7 },
+        "japanese_mmlu": { "score": 81.5 }
+      }
+    },
+    {
+      "id": "claude-opus-4",
+      "name": "Claude Opus 4",
+      "provider": "Anthropic",
+      "price_per_1m_tokens": { "input": 15, "output": 75 },
+      "context_length": 200000,
+      "release_date": "2025-05-22",
+      "benchmarks": {
+        "jglue": { "score": 90.3 },
+        "rakuda": { "score": 88.1 },
+        "nejumi": { "score": 89.2 },
+        "mt_bench_ja": { "score": 9.2 },
+        "japanese_mmlu": { "score": 87.8 }
+      }
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
+      "provider": "Google",
+      "price_per_1m_tokens": { "input": 1.25, "output": 10 },
+      "context_length": 1000000,
+      "release_date": "2025-03-25",
+      "benchmarks": {
+        "jglue": { "score": 88.5 },
+        "rakuda": { "score": 80.7 },
+        "nejumi": { "score": 86.3 },
+        "mt_bench_ja": { "score": 8.9 },
+        "japanese_mmlu": { "score": 83.2 }
+      }
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "name": "Gemini 2.5 Flash",
+      "provider": "Google",
+      "price_per_1m_tokens": { "input": 0.15, "output": 0.6 },
+      "context_length": 1000000,
+      "release_date": "2025-04-17",
+      "benchmarks": {
+        "jglue": { "score": 78.3 },
+        "rakuda": { "score": 71.5 },
+        "nejumi": { "score": 74.8 },
+        "mt_bench_ja": { "score": 7.8 },
+        "japanese_mmlu": { "score": 70.1 }
+      }
+    },
+    {
+      "id": "deepseek-v3",
+      "name": "DeepSeek-V3",
+      "provider": "DeepSeek",
+      "price_per_1m_tokens": { "input": 0.27, "output": 1.1 },
+      "context_length": 128000,
+      "release_date": "2024-12-26",
+      "benchmarks": {
+        "jglue": { "score": 80.1 },
+        "rakuda": { "score": 74.3 },
+        "nejumi": { "score": 77.9 },
+        "mt_bench_ja": { "score": 8.0 },
+        "japanese_mmlu": { "score": 72.6 }
+      }
+    },
+    {
+      "id": "llama-3-1-70b",
+      "name": "Llama 3.1 70B",
+      "provider": "Meta",
+      "price_per_1m_tokens": { "input": 0.88, "output": 0.88 },
+      "context_length": 131072,
+      "release_date": "2024-07-23",
+      "benchmarks": {
+        "jglue": { "score": 68.5 },
+        "rakuda": { "score": 58.2 },
+        "nejumi": { "score": 62.1 },
+        "mt_bench_ja": { "score": 6.5 },
+        "japanese_mmlu": null
+      }
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "provider": "Meta",
+      "price_per_1m_tokens": { "input": 3, "output": 3 },
+      "context_length": 131072,
+      "release_date": "2024-07-23",
+      "benchmarks": {
+        "jglue": { "score": 76.2 },
+        "rakuda": { "score": 70.8 },
+        "nejumi": { "score": 73.5 },
+        "mt_bench_ja": { "score": 7.5 },
+        "japanese_mmlu": null
+      }
+    },
+    {
+      "id": "elyza-llama-3-70b",
+      "name": "ELYZA-japanese-Llama-3-70b",
+      "provider": "ELYZA",
+      "price_per_1m_tokens": null,
+      "context_length": 8192,
+      "release_date": "2024-06-26",
+      "benchmarks": {
+        "jglue": { "score": 74.8 },
+        "rakuda": { "score": 72.1 },
+        "nejumi": { "score": 70.3 },
+        "mt_bench_ja": { "score": 7.2 },
+        "japanese_mmlu": { "score": 66.8 }
+      }
+    },
+    {
+      "id": "plamo-100b",
+      "name": "PLaMo-100B",
+      "provider": "Preferred Networks",
+      "price_per_1m_tokens": null,
+      "context_length": 4096,
+      "release_date": "2024-05-15",
+      "benchmarks": {
+        "jglue": { "score": 71.5 },
+        "rakuda": { "score": 68.9 },
+        "nejumi": null,
+        "mt_bench_ja": { "score": 6.8 },
+        "japanese_mmlu": { "score": 62.1 }
+      }
+    },
+    {
+      "id": "swallow-70b",
+      "name": "Swallow 70B",
+      "provider": "東京工業大学",
+      "price_per_1m_tokens": null,
+      "context_length": 8192,
+      "release_date": "2024-04-01",
+      "benchmarks": {
+        "jglue": { "score": 69.3 },
+        "rakuda": { "score": 64.5 },
+        "nejumi": { "score": 66.2 },
+        "mt_bench_ja": { "score": 6.3 },
+        "japanese_mmlu": { "score": 58.7 }
+      }
+    }
+  ],
+  "benchmarks": {
+    "jglue": {
+      "name": "JGLUE",
+      "description": "日本語自然言語理解ベンチマーク（JSTS, JNLI, JSQuAD等）",
+      "scale": { "min": 0, "max": 100 },
+      "normalize": "identity"
+    },
+    "rakuda": {
+      "name": "RAKUDA",
+      "description": "日本語LLM定性評価ベンチマーク",
+      "scale": { "min": 0, "max": 100 },
+      "normalize": "identity"
+    },
+    "nejumi": {
+      "name": "Nejumi",
+      "description": "多角的日本語LLM評価リーダーボード",
+      "scale": { "min": 0, "max": 100 },
+      "normalize": "identity"
+    },
+    "mt_bench_ja": {
+      "name": "MT-Bench JP",
+      "description": "マルチターン対話品質評価（日本語版）",
+      "scale": { "min": 1, "max": 10 },
+      "normalize": "multiply_10"
+    },
+    "japanese_mmlu": {
+      "name": "Japanese MMLU",
+      "description": "日本語知識ベンチマーク（多分野）",
+      "scale": { "min": 0, "max": 100 },
+      "normalize": "identity"
+    }
+  },
+  "last_updated": "2026-03-22"
+}
