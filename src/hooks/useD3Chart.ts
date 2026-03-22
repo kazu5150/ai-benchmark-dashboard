@@ -40,7 +40,11 @@ export function useD3Chart({
 
       renderingRef.current = true;
 
-      setDimensions({ width: Math.round(width), height: Math.round(height) });
+      const w = Math.round(width);
+      const h = Math.round(height);
+      setDimensions((prev) =>
+        prev.width === w && prev.height === h ? prev : { width: w, height: h }
+      );
 
       const svg = d3.select(svgRef.current);
       svg.selectAll("*").remove();

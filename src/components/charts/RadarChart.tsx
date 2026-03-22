@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import * as d3 from "d3";
 import { useD3Chart } from "@/hooks/useD3Chart";
 import type { Model, BenchmarkMeta } from "@/lib/types";
@@ -14,7 +14,7 @@ interface RadarChartProps {
 const CHART_COLORS = ["#E69F00", "#56B4E9", "#009E73", "#CC79A7"];
 
 export function RadarChart({ models, benchmarks }: RadarChartProps) {
-  const benchmarkKeys = Object.keys(benchmarks);
+  const benchmarkKeys = useMemo(() => Object.keys(benchmarks), [benchmarks]);
 
   const renderChart = useCallback(
     (

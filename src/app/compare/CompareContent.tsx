@@ -24,29 +24,24 @@ export function CompareContent() {
   const selectedModels = getModelsByIds(selectedIds);
 
   // URLを同期
-  const updateUrl = useCallback(
-    (ids: string[]) => {
-      const params = new URLSearchParams();
-      if (ids.length > 0) {
-        params.set("models", ids.join(","));
-      }
-      const query = params.toString();
-      router.replace(`/compare${query ? `?${query}` : ""}`, { scroll: false });
-    },
-    [router]
-  );
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (selectedIds.length > 0) {
+      params.set("models", selectedIds.join(","));
+    }
+    const query = params.toString();
+    router.replace(`/compare${query ? `?${query}` : ""}`, { scroll: false });
+  }, [selectedIds, router]);
 
   const handleToggle = useCallback(
     (id: string) => {
-      setSelectedIds((prev) => {
-        const next = prev.includes(id)
+      setSelectedIds((prev) =>
+        prev.includes(id)
           ? prev.filter((x) => x !== id)
-          : [...prev, id];
-        updateUrl(next);
-        return next;
-      });
+          : [...prev, id]
+      );
     },
-    [updateUrl]
+    []
   );
 
   // 初回ロード時にURLが空なら人気モデルをサジェスト
